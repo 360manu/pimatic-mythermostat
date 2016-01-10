@@ -1,0 +1,152 @@
+#index li.mythermostat {
+    text-align: right;
+    line-height: 30px;
+}
+#index li.mythermostat div.controls {
+    max-width: 100%;
+    margin: 0;
+    overflow: hidden;
+    text-align: right;
+    white-space: normal;
+}
+#index li.mythermostat div.controls .ui-controlgroup {
+    display: inline-block;
+    margin: 0;
+    margin-left: 4px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 0.8em;
+}
+#index li.mythermostat div.controls .ui-group-theme-a {
+    border-radius: 2em
+}
+#index li.mythermostat div.controls .ui-controlgroup .ui-btn {
+    padding-left: 8px;
+    padding-right: 8px;
+    width:50px;
+}
+#index li.mythermostat div.controls .spinbox input {
+    border: none;
+    background: none;
+    width: 36px;
+    margin: 0;
+    margin-left: -8px;
+    margin-right: -8px;
+    padding: 0;
+    font-weight: bold;
+    color: #000
+    /*{a-bup-color}*/
+    
+    ;
+}
+#index li.mythermostat .valve-position {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 6px;
+    line-height: 30px;
+    height: 30px;
+    background: #C7C7C7;
+    margin: 5px 0px;
+    border-radius: 2px;
+}
+#index li.mythermostat .valve-position-bar {
+    display: inline-block;
+    height: 0%;
+    width: 100%;
+    background: #007dcd
+    /*{a-bar-background-color}*/
+    
+    ;
+    vertical-align: bottom;
+    border-radius: 2px;
+}
+#index li.mythermostat.unsynced {
+    color: gray !important;
+}
+/*program*/
+
+.day-program {
+    width: 100%;
+    text-align: center;
+}
+
+.day-title {
+    margin-top: 10px;
+    margin-left: 40px;
+    margin-bottom: 3px;
+}
+
+.day-program .day-name {
+    line-height: 23px;
+}
+
+.program-zone-wrapper {
+    width: 100%;
+}
+
+.program-zone-wrapper .zones {
+    float: left;
+    height: 85px;
+    width: 100%;
+    position: relative;
+    background-image: repeating-linear-gradient(0deg,transparent,transparent 10px,#CCC 10px,#CCC 11px);
+}
+
+.program-zone-wrapper .zones-scale {
+    float: left;
+    height: 35px;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+}
+
+.zone-day {
+    position: absolute;
+    z-index: 1;
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    bottom: 0;
+    -moz-border-radius: 3px 3px 0px 0px;
+    -webkit-border-radius: 3px 3px 0px 0px;
+    border-radius: 3px 3px 0px 0px;
+}
+ 
+@keyframes blinker { 
+   50% { opacity: 0.5; } 
+}
+
+.blink {
+  animation: blinker 2s step-end infinite;
+}
+
+.zone-scale {
+    position: relative;
+    z-index: 1;
+    float: left;
+    height: 100%;
+    overflow: hidden;
+    bottom: 0;
+}
+ 
+.zone-day .zone-daytemp {
+    text-align: center;
+    font-size: 13px;
+    color: #fff;
+    opacity: 0.8;
+    font-family: ProximaNova-regular;
+}
+
+.zone-scale .zone-dayhour {
+    text-align: left;
+    font-size: 11px;
+    color: #000;
+    font-family: ProximaNova-regular;
+    border-left: 1px solid #888;
+    height:20px;
+}
+ 
+.zone-day :hover {
+    opacity: 0.8;
+}

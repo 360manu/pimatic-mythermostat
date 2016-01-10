@@ -1,0 +1,27 @@
+{
+  "name": "pimatic-mythermostat",
+  "description": "Plugin to control my electric heater.",
+  "author": "Emmanuel Candus",
+  "main": "MyThermostat",
+  "files": [
+  "MyThermostat.coffee",
+	"mode_Scheduled.coffee",
+	"mode_Manual.coffee",
+	"mode_Base.coffee",
+	"controller_ON_OFF.coffee",
+	"controller_PID.coffee",
+  "MyThermostat-config-schema.coffee",
+	"device-config-schema.coffee",
+	"app"
+  ],
+  "version": "0.8.12",
+  "dependencies": {},
+  "peerDependencies": {
+    "pimatic": "0.8.* && >=0.8.31"
+  },
+  "configSchema": "MyThermostat-config-schema.coffee",
+  "engines": {
+    "node": ">0.8.x",
+    "npm": ">1.1.x"
+  }
+}
