@@ -121,7 +121,7 @@ module.exports = (env) ->
 
     setTemperatureSetpoint: (temperatureSetpoint) ->
        #let's the controller know 
-      @controller.setTargetValue( @_temperatureSetpoint)
+      @controller.setTargetValue(temperatureSetpoint)
       # issue event
       if temperatureSetpoint is @_temperatureSetpoint then return
       @_temperatureSetpoint = temperatureSetpoint
