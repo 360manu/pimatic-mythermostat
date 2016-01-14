@@ -23,21 +23,18 @@
 #index li.mythermostat div.controls .ui-controlgroup .ui-btn {
     padding-left: 8px;
     padding-right: 8px;
-    width:50px;
+    width:30px;
 }
 #index li.mythermostat div.controls .spinbox input {
     border: none;
-    background: none;
-    width: 36px;
+	background: inherit;
+	color: inherit;
+    width: 26px;
     margin: 0;
     margin-left: -8px;
     margin-right: -8px;
     padding: 0;
-    font-weight: bold;
-    color: #000
-    /*{a-bup-color}*/
-    
-    ;
+	font-weight: bold;
 }
 #index li.mythermostat .valve-position {
     display: inline-block;
@@ -141,7 +138,7 @@
 .zone-scale .zone-dayhour {
     text-align: left;
     font-size: 11px;
-    color: #000;
+    /*color: #000;*/
     font-family: ProximaNova-regular;
     border-left: 1px solid #888;
     height:20px;
