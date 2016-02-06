@@ -5,17 +5,21 @@
   "license": "MIT",
   "main": "MyThermostat",
   "files": [
-  "MyThermostat.coffee",
-	"mode_Scheduled.coffee",
-	"mode_Manual.coffee",
-	"mode_Base.coffee",
-	"controller_ON_OFF.coffee",
-	"controller_PID.coffee",
-  "MyThermostat-config-schema.coffee",
-	"device-config-schema.coffee",
-	"app"
+    "MyThermostat.coffee",
+    "mode_Scheduled.coffee",
+    "mode_Manual.coffee",
+    "mode_Base.coffee",
+    "controller_ON_OFF.coffee",
+    "controller_PID.coffee",
+    "MyThermostat-config-schema.coffee",
+    "device-config-schema.coffee",
+    "app"
   ],
-  "version": "0.8.12",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/360manu/pimatic-mythermostat.git"
+  },
+  "version": "0.0.1",
   "dependencies": {},
   "peerDependencies": {
     "pimatic": "0.8.* && >=0.8.31"
