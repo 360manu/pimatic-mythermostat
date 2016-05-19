@@ -31,7 +31,7 @@ module.exports = {
         default: "press heat-off-button and set presence of heatingindicator absent"
 
       programs:
-        description: "The different confort zone"
+        description: "The different comfort zone"
         type: "array"
         default: []
         format: "table"

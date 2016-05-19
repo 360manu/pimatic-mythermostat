@@ -4,9 +4,9 @@ Thermostat plugin for the Pimatic
 ## Synopsis
 
 This plugin is a simple thermostat for Pimatic. 
-here are some of the functionnalities
+Here are some examples of the functionality
 * scheduling and manual modes
-* Bang Bang and PID controlers
+* Bang Bang and PID controllers
 * Early On (coming)
 * a simple but explicit UI
 
@@ -16,7 +16,7 @@ here are some of the functionnalities
 
 To make it work, you'll need :
 * some heaters that can be witched on or off using a Pimatic rules or action
-* a thermomether controlling the temperature of the room
+* a thermometer controlling the temperature of the room
 
 ## configuration
 
@@ -27,7 +27,7 @@ To include the plugin just add this code in the `plugins` section
     },
 
     
-The configuration is splited in 3 different zones
+The configuration is split in 3 different zones
 1.  the observable and controllers
 2.  the different programs
 3.  the schedule
@@ -44,7 +44,7 @@ it will also switch On or Off the heaters by executing an Action
 
 ### The different programs
 
-The thermostat objective temperature is based on programs.  
+The thermostat's objective temperature is based on programs.  
 
       "programs": [
         {
@@ -94,12 +94,12 @@ For each day, you can set a program (ie a temperature) that starts at the given 
     }, ...
 
  
-### the trick!
+### The trick!
 
-to refresh the UI when program changes, you must emit a variable.
+To refresh the UI when program changes, you must emit a variable.
 Pimatic will try to save it in the database and will throw an exception as it is an array.
 
-just add this to the `deviceAttributeLogging`
+Just add this to the `deviceAttributeLogging`
 
     {
       "deviceId": "*",
@@ -124,7 +124,7 @@ in the `database` section
       ],
     }
 
-add as many thermostat as needed in the `device`section
+Add as many thermostat devices as needed in the `device`section.
 
     {
       "id": "thermostat",
@@ -324,8 +324,8 @@ add as many thermostat as needed in the `device`section
 
 ## Next
 
-This plugin is still under developpment.
-*  PID is not correclty implemented, as of today, it is a simple proportionnal controler
+This plugin is still under development.
+*  PID is not correctly implemented, as of today, it is a simple proportional controller
 *  PreHeat : start heating according to the next scheduled temperature
 *  Make it smart : add a presence sensor and some maths (HMM?) 
 *  Off mode is not working
