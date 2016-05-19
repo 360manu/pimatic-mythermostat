@@ -2,6 +2,7 @@
   "name": "pimatic-mythermostat",
   "description": "Plugin to control my electric heater.",
   "author": "Emmanuel Candus",
+  "license": "MIT",
   "main": "MyThermostat",
   "files": [
   "MyThermostat.coffee",
