@@ -16,7 +16,7 @@ module.exports = (env) ->
       if @TempForProg.length is 0
         @TempForProg = [@config.ecoTemp]
 
-      # check timetable and tranform as offset in minute from 00h00
+      # check timetable and transform as offset in minute from 00h00
       @timetables = []
       for zone in @config.timetable
         i = @days.indexOf(zone.day)
@@ -108,7 +108,7 @@ module.exports = (env) ->
       for i in [0 .. program.length]
         zone = program[i]
         if offset < zone.end 
-          # zone is found : insert the new one if necessary otherwize, just update the zone
+          # zone is found : insert the new one if necessary otherwise, just update the zone
           if (i > 0) && (offset - program[i-1].end > 15)
             newZone = {end:offset - 1, temp:zone.temp}
             program.splice(i, 0, newZone)

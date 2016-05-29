@@ -16,7 +16,7 @@ module.exports = (env) ->
 
       # wait till all plugins are loaded
       @framework.on "after init", =>
-        # Check if the mobile-frontent was loaded and get a instance
+        # Check if the mobile-frontend was loaded and get a instance
         mobileFrontend = @framework.pluginManager.getPlugin 'mobile-frontend'
         if mobileFrontend?
           mobileFrontend.registerAssetFile 'js', "pimatic-mythermostat/app/mythermostat-page.coffee"
@@ -100,7 +100,7 @@ module.exports = (env) ->
       # stop old mode
       @_getActiveMode().setActive(false)
       @_mode = mode
-      # activate neww one
+      # activate new one
       @_getActiveMode().setActive(true)
       @emit "mode", @_mode
 
@@ -145,7 +145,7 @@ module.exports = (env) ->
 
     # event and anticipation
     setNextEvent: (ev) ->
-      # here we can anticiapte the next state
+      # here we can anticipate the next state
       # preheat or stop heating 
       return true
 
