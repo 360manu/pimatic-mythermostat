@@ -19,6 +19,9 @@ module.exports = (env) ->
 
       @_interval = setInterval(@_controlHeating, 30 * 1000)
        
+    stop: ->
+      clearTimeout @_interval
+      
     setObservedValue: (value) ->
       env.logger.debug "observed #{value}"
       @_observedValue = value

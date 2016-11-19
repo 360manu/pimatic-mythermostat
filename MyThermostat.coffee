@@ -91,6 +91,14 @@ module.exports = (env) ->
       #call device constructor
       super()
 
+    destroy: () ->
+      # shutdown device, i.e., remove Timers, de-register event handlers registered with the framework
+      @modeSchedule.stop()
+      @modeManual.stop()
+      @_vars.removeListener("variableAdded", @_variableAddedListener)
+      @_vars.removeListener("variableValueChanged", @_variableValueChangedListener)
+      super()
+
     # Getter / Setter of attributes
     getMode: () -> 
       Promise.resolve(@_mode)
@@ -164,11 +172,11 @@ module.exports = (env) ->
       @_observedName = @config.variableTemp
       @_vars = plugin.framework.variableManager
       # wait till variable is added
-      @_vars.on "variableAdded", (variable) =>
+      @_vars.on "variableAdded", @_variableAddedListener = (variable) =>
         if variable.name is @_observedName
           @_setObservedValue(variable.getCurrentValue())
       # when variable is updated
-      @_vars.on "variableValueChanged", (variable, value) =>
+      @_vars.on "variableValueChanged", @_variableValueChangedListener = (variable, value) =>
         if variable.name is @_observedName
           @_setObservedValue(value)
 

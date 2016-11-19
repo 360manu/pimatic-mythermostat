@@ -7,6 +7,9 @@ module.exports = (env) ->
       env.logger.debug "Controller : BangBang"  
       @_interval = setInterval(@_controlHeating, 30 * 1000)
 
+    stop: ->
+      clearTimeout @_interval
+
     setObservedValue: (value) ->
       @_observedValue = value
 

@@ -19,7 +19,7 @@
     "type": "git",
     "url": "https://github.com/360manu/pimatic-mythermostat.git"
   },
-  "version": "0.0.1",
+  "version": "0.0.2",
   "dependencies": {},
   "peerDependencies": {
     "pimatic": "0.8.* && >=0.8.31"
